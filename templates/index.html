@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Rain Blog</h1>
+    <div class="pt-2 pb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aenean consectetur lacus quis purus ultrices rutrum quis nec nisi.
+        Morbi feugiat tincidunt ipsum, sit amet ornare sapien tempor ac.
+        Proin leo odio, maximus sit amet tellus eget, convallis egestas libero.
+        Sed pellentesque ultricies blandit. Mauris vel ultrices urna.
+        Vestibulum semper eget lacus et pellentesque.
+        Mauris aliquet facilisis ex, eu tincidunt nibh lacinia nec.
+    </div>
+    <form class="mt-5 form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <div class="blog mt-2">
+        <div class="card mb-3" style="width: 400px">
+            <div class="card-body">
+                <h5 class="card-title">Blog Post 1</h5>
+                <p class="card-text">Blog description</p>
+                <a href="#" class="btn btn-primary">View</a>
+            </div>
+        </div>
+        <div class="card mb-3" style="width: 400px">
+            <div class="card-body">
+                <h5 class="card-title">Blog Post 2</h5>
+                <p class="card-text">Blog description</p>
+                <a href="#" class="btn btn-primary">View</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
