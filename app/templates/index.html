@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Rain Blog</h1>
+    <div class="pt-2 pb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aenean consectetur lacus quis purus ultrices rutrum quis nec nisi.
+        Morbi feugiat tincidunt ipsum, sit amet ornare sapien tempor ac.
+        Proin leo odio, maximus sit amet tellus eget, convallis egestas libero.
+        Sed pellentesque ultricies blandit. Mauris vel ultrices urna.
+        Vestibulum semper eget lacus et pellentesque.
+        Mauris aliquet facilisis ex, eu tincidunt nibh lacinia nec.
+    </div>
+    <form action="/search" method="POST" class="mt-5 form-inline my-2 my-lg-0">
+      <input name="q" id="q" class="form-control mr-sm-2" type="search" placeholder="Search a forecast" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <div class="blog mt-2">
+        {% if forecasts|length %}
+            {% for f in forecasts %}
+            <div class="card mb-3" style="width: 400px">
+                <div class="card-body">
+                    <h5 class="card-title">{{f.forecast}}</h5>
+                    <strong><p class="card-text">{{f.city_name}}</p></strong>
+                    <p class="card-text">{{f.comment}}</p>
+                    <p class="card-text">{{f.datetime}}</p>
+                    <a href="#" class="btn btn-primary">View</a>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+        <p>There are currently no rain blogs.</p>
+        {% endif %}
+    </div>
+{% endblock %}
